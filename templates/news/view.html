@@ -2,7 +2,7 @@
 {% block title %}Arch Linux - News: {{ news.title }}{% endblock %}
 
 {% block content %}
-<div itemscope itemtype="http://schema.org/Article" class="news-article box">
+<article itemscope itemtype="http://schema.org/Article" class="news-article box">
     <h2 itemprop="headline">{{ news.title }}</h2>
     <meta itemprop="dateCreated" content="{{ news.postdate|date:"Y-m-d" }}" />
     <meta itemprop="datePublished" content="{{ news.postdate|date:"Y-m-d" }}" />
@@ -28,5 +28,5 @@
     <p class="article-info">{{ news.postdate|date }} - {{ news.author.get_full_name }}</p>
 
     <div class="article-content" itemprop="articleBody">{{ news.html }}</div>
-</div>
+</article>
 {% endblock %}
