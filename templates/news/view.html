@@ -4,16 +4,16 @@
 {% block content %}
 <div itemscope itemtype="http://schema.org/Article" class="news-article box">
     <h2 itemprop="headline">{{ news.title }}</h2>
-    <meta itemprop="dateCreated" content="{{ news.postdate|date:"Y-m-d" }}"/>
-    <meta itemprop="datePublished" content="{{ news.postdate|date:"Y-m-d" }}"/>
-    <meta itemprop="dateModified" content="{{ news.last_modified|date:"Y-m-d" }}"/>
-    <meta itemprop="inLanguage" content="en"/>
-    <meta itemprop="wordCount" content="{{ news.content|wordcount }}"/>
+    <meta itemprop="dateCreated" content="{{ news.postdate|date:"Y-m-d" }}" />
+    <meta itemprop="datePublished" content="{{ news.postdate|date:"Y-m-d" }}" />
+    <meta itemprop="dateModified" content="{{ news.last_modified|date:"Y-m-d" }}" />
+    <meta itemprop="inLanguage" content="en" />
+    <meta itemprop="wordCount" content="{{ news.content|wordcount }}" />
     <div class="itemprop" itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="{{ news.author.get_full_name|escape }}"/>
+        <meta itemprop="name" content="{{ news.author.get_full_name|escape }}" />
     </div>
     <div class="itemprop" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Arch Linux"/>
+        <meta itemprop="name" content="Arch Linux" />
     </div>
 
     {% if perms.news.change_news %}
